@@ -1,0 +1,27 @@
+
+def calculoTotal(valorInicial, rendimento, aporte, periodos):
+    calculoMensal = (rendimento / 100) + valorInicial + aporte / periodos
+    print(f'Seu valor inicial foi R${valorInicial:.2f}')
+    print(f'Seu rendimento é (%){rendimento:.2f}')
+    print(f'Seu aporte mensal é R${aporte:.2f}')
+    for i in range(periodos):
+        valorInicial = valorInicial + calculoMensal
+        print(f"\t {i+1}º mês: R$ {valorInicial:.2f}")
+
+
+valorInicial = float(input('Digite seu valor inicial: R$'))
+rendimento = float(input('Digite seu rendimento por período (%): '))
+aporte = float(input('Digite seu aporte a cada período: R$'))
+periodos = int(input('Digite o total de períodos mensais: '))
+
+calculoTotal(valorInicial, rendimento, aporte, periodos)
+
+
+
+  
+
+
+
+    
+
+
