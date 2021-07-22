@@ -1,1 +1,75 @@
+def capturar_dados():
+    RendaMensal = float(input('Qual a sua Renda Mensal? R$ '))
+    CustoMoradia = float(input('Qual seu custo com Moradia? R$ '))
+    CustoEducacao = float(input('Qual seu custo com Educação? R$ '))
+    CustoTransporte = float(input('Qual seu custo com Transporte? R$ '))
+    
+    Dados = []    
+    Dados.append(RendaMensal)
+    Dados.append(CustoMoradia)
+    Dados.append(CustoEducacao)
+    Dados.append(CustoTransporte)    
+    
+    return Dados
 
+def calcular_maxgastos(RendaMensal):
+    Moradia = round(RendaMensal * 0.3, 2)
+    Educacao = round(RendaMensal * 0.2, 2)
+    Transporte = round(RendaMensal * 0.15, 2)
+    
+    MaxGastos = []
+    MaxGastos.append(Moradia)
+    MaxGastos.append(Educacao)
+    MaxGastos.append(Transporte)
+    
+    return MaxGastos
+
+def calcular_porc_comprometida(Dados):
+    porc_comp_moradia = round((Dados[1]/Dados[0]) * 100, 2)
+    porc_comp_educacao = round((Dados[2]/Dados[0]) * 100, 2)
+    porc_comp_transp = round((Dados[3]/Dados[0]) * 100, 2)
+    
+    PorcCom = []
+    PorcCom.append(porc_comp_moradia)
+    PorcCom.append(porc_comp_educacao)
+    PorcCom.append(porc_comp_transp)
+    
+    return PorcCom
+
+def diagsnostico_saude_financeira(Dados, MaxGastos, PorcComprom):
+    texto = []
+    
+    #Compara Dados de Gastos de Moradia e insere mensagem a ser mostrada no diagnóstico como resultado
+    if Dados[1] <= MaxGastos[0]:
+        texto.append(f'Seus gastos totais são de R$ {Dados[1]} e comprometem {PorcComprom[0]}% da sua Renda Mensal. \nPARABÉNS: Seus gastos estão dentro da margem recomendada.')
+    else:
+        texto.append(f'Seus gastos totais são de R$ {Dados[1]} e comprometem {PorcComprom[0]}% da sua Renda Mensal. \nATENÇÃO: Portanto, idealmente, o máximo de sua renda comprometida deveria ser de R$ {MaxGastos[0]}')
+
+    #Compara Dados de Gastos de Educação e insere mensagem a ser mostrada no diagnóstico como resultado
+    if Dados[2] <= MaxGastos[1]:
+        texto.append(f'Seus gastos totais são de R$ {Dados[2]} e comprometem {PorcComprom[1]}% da sua Renda Mensal. \nPARABÉNS: Seus gastos estão dentro da margem recomendada.')
+    else:
+        texto.append(f'Seus gastos totais são de R$ {Dados[2]} e comprometem {PorcComprom[1]}% da sua Renda Mensal. \nATENÇÃO: Portanto, idealmente, o máximo de sua renda comprometida deveria ser de R$ {MaxGastos[2]}')
+       
+    #Compara Dados de Gastos de Transporte e insere mensagem a ser mostrada no diagnóstico como resultado
+    if Dados[3] <= MaxGastos[2]:
+        texto.append(f'Seus gastos totais são de R$ {Dados[3]} e comprometem {PorcComprom[2]}% da sua Renda Mensal. \nPARABÉNS: Seus gastos estão dentro da margem recomendada.')
+    else:
+        texto.append(f'Seus gastos totais são de R$ {Dados[3]} e comprometem {PorcComprom[2]}% da sua Renda Mensal. \nATENÇÃO: Portanto, idealmente, o máximo de sua renda comprometida deveria ser de R$ {MaxGastos[3]}')
+
+    #Imprimi diagnóstico
+    print('\n\nResultado do seu Diagnóstico de Saúde Financeira:\n')
+    print('Moradia:\n'+texto[0]+'\n')
+    print('Educação:\n'+texto[1]+'\n')
+    print('Transporte:\n'+texto[2]+'\n')
+    print('\nMuito Obrigado! Espero que tenha gostado!')
+    
+    
+
+
+DadosCapturados = capturar_dados()
+MaxGastosCalculados = calcular_maxgastos(DadosCapturados[0])
+PorcCompromCalculada = calcular_porc_comprometida(DadosCapturados)
+
+diagsnostico_saude_financeira(DadosCapturados, MaxGastosCalculados, PorcCompromCalculada)
+    
