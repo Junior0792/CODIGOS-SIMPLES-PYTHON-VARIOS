@@ -1,0 +1,4 @@
+print('O preço do litro de gasolina é R$5 reais')
+litro = int(input('Digite quantos litros você vai abastecer? '))
+preço = litro * 5
+print('Você abasteceu {} litros. O valor a pagar é R${}'.format(litro, preço))
