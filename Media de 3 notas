@@ -1,0 +1,5 @@
+nota_1 = float(input('Primeira nota: '))
+nota_2 = float(input('Segunda nota: '))
+nota_3 = float(input('Terceira nota: '))
+calcular_media = (nota_1 * 1 + nota_2 * 2 + nota_3 * 3) / 6
+print('Sua media é {:.2f}'.format(calcular_media))
