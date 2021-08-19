@@ -1,0 +1,7 @@
+def calcular_area(base, altura, calcular):
+    calcular = base * altura
+    return
+base = float(input('Informe sua base: '))
+altura = float(input('Informe sua altura: '))
+calcular = base * altura
+print('A area do retangulo é {}cm'.format(calcular))
