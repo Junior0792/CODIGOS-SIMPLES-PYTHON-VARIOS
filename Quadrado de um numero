@@ -1,0 +1,9 @@
+def calcular_quadrado(valor):
+    quadrado = valor * valor
+    return quadrado
+# Solicitar ao usuario do programa um valor para calcular seu quadrado:
+numero = float(input('Informe um numero: '))
+
+quadrado = calcular_quadrado(numero)
+
+print('O quadrado do valor é {}'.format(quadrado))
