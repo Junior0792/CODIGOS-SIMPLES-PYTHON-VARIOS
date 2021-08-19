@@ -1,0 +1,50 @@
+#Enquanto notas estiverem erradas, repete captura de valores em tela
+nota_invalida = True
+while nota_invalida:
+    #Imprime título do algoritimo
+    print("Concurso de Fantasias")
+    
+    #Captura dados do partipante 1
+    participante1 = input("\nQual o nome do Participante 01: ")
+    nota1 = float(input("Qual a nota do Participante 01: "))
+ 
+    #Captura dados do partipante 2
+    participante2 = input("\nQual o nome do Participante 02: ")
+    nota2 = float(input("Qual a nota do Participante 02: "))
+ 
+    #Captura dados do partipante 3
+    participante3 = input("\nQual o nome do Participante 03: ")
+    nota3 = float(input("Qual a nota do Participante 03: "))
+ 
+    #Captura dados do partipante 4
+    participante4 = input("\nQual o nome do Participante 04: ")
+    nota4 = float(input("Qual a nota do Participante 04: "))
+ 
+    #Captura dados do partipante 5
+    participante5 = input("\nQual o nome do Participante 05: ")
+    nota5 = float(input("Qual a nota do Participante 05: "))
+        
+    #Verifica se as notas estão fora do intervalo entre 0 e 10
+    if nota1 < 0 or nota2 < 0 or nota3 < 0 or nota4 < 0 or nota1 < 0 or nota2 > 10 or nota3 > 10 or nota4 > 10 or nota5 > 10:
+        #Se as notas estiverem fora do intervalo, imprime mensagem de alerta
+        print("Notas inválidas! A nota deve estar entre 0 e 10.")
+        nota_invalida = True
+    else:
+        #Se notas estiverem dentro do intervalo "nota invalida = False", pois as notas estão todas válidas
+        nota_invalida = False
+ 
+#Verificar qual nota é maior entre as 5 notas capturadas anteriormente
+if nota1 > nota2 and nota1 > nota3 and nota1 > nota4 and nota1 > nota5:
+    print(f"\nO Vencedor foi {participante1} com {nota1} pontos!")
+ 
+if nota2 > nota1 and nota2 > nota3 and nota2 > nota4 and nota2 > nota5:
+    print(f"\nO Vencedor foi {participante2} com {nota2} pontos!")
+ 
+if nota3 > nota1 and nota3 > nota2 and nota3 > nota4 and nota3 > nota5:
+    print(f"\nO Vencedor foi {participante3} com {nota3} pontos!")
+ 
+if nota4 > nota1 and nota4 > nota2 and nota4 > nota3 and nota4 > nota5:
+    print(f"\nO Vencedor foi {participante4} com {nota4} pontos!")
+ 
+if nota5 > nota1 and nota5 > nota2 and nota5 > nota3 and nota5 > nota4:
+    print(f"\nO Vencedor foi {participante5} com {nota5} pontos!")
