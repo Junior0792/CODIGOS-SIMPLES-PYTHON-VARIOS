@@ -1,0 +1,29 @@
+valor_invalido = True
+
+while valor_invalido:
+    
+    try:
+       valor = float(input('Informe o valor total de consumo: R$ ')) # Solicitar o valor do consumo ao cliente
+       pessoas = int(input('Informe o total de pessoas: ')) # Solicitar o total de pessoas que consumiram 
+       gorjeta = float(input('Informe o percentual do serviço, entre 0 e 100 %: '))# Solicitr ao cliente o percentual que vai pagar
+       
+       if valor <= 0:
+           print('Valor da conta deve ser maior que zero')
+       elif pessoas <=0:
+           print('Quantidade de pessoas tem que ser maior a zero')
+       elif not (gorjeta > 0 and gorjeta <= 100):
+           print('O percentual do serviço esta invalido')
+       else:
+           calcular_taxa = (valor * gorjeta)  / 100
+           calcular_pessoas = (valor + calcular_taxa) / pessoas 
+           calcular_total = valor + calcular_taxa
+           print(f"Valor total da conta é {str(calcular_total).replace('.',',')} ")# Valor total da conta
+           print(f"Valor total da conta por pessoas é {str(calcular_pessoas).replace('.',',')} ")# Valor total da conta por pessoas 
+           print(f"O garçom vai receber {str(calcular_taxa).replace('.',',')}")
+         
+           valor_invalido = False
+           print('Sistema finalizado')
+    except:
+        print('Valores invalidos')
+        
+
