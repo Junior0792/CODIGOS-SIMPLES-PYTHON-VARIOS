@@ -1,0 +1,6 @@
+n1 = float(input('informe a nota na primeira prova:'))
+n2 = float(input('informe a nota na segunda prova:'))
+# Os resultados da função input Sempre serão textos
+#Quando precisarmos trabalhar com numeros, precisaremos converter esses valores:
+media =  (n1 + n2) / 2
+print('Sua media é {}'.format(media))
