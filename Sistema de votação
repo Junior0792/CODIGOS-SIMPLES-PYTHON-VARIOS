@@ -1,0 +1,15 @@
+print('Sistema de Votação Online')
+#Verificar se a idade da pessoa é maior do que zero
+    
+idade = int(input('Informe sua idade: '))# Solicitar a idade do usuario
+
+#Verificar se a idade da pessoa é maior do que zero
+
+if idade >= 18 and idade <= 69:# O sistema verifica se o ususario é maior ou igual a 18 anos e se é menor igual a 69 anos
+    print('Tem obrigação de votar')# Na tela vai aparecer para o usuario que tem direito de votar
+elif idade >= 16 and idade <= 18 or idade >= 70:# O sistema verifica se o ususario é maior de 16 anos e menor de 18 anos ou maior de 70 anos
+    print('Não tem obrigação de votar')# Na tela vai aparecer para o usuario que não tem direito ainda de votar
+else:# Usuarios menores de 16 anos não tem direito de votar
+    print('Não tem direito a voto')# Na tela vai aparecer para o ususario que não tem direito ainda de votar
+    
+print('Obrigado por usar nosso sistema!')    
