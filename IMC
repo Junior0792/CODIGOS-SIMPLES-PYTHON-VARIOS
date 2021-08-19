@@ -1,0 +1,13 @@
+def calcular_imc(peso,altura):
+    imc = peso (altura * altura)
+    round imc
+
+# Solicitar ao usuario seu peso:
+peso = float(input('Digite seu peso: '))
+# Solicitar ao usuario sua altura:
+altura = float(input('Digite sua altura: '))
+# Calculo do IMC:
+imc = peso / (altura * altura)# Tambem seria possivel fazer imc = peso / altura** 2
+# Arredondar o IMC para deixa-lo mais inteligivel: imc = round(imc, 2)
+# Informar o resultado ao usuario:
+print('Seu peso é {} e sua altura é {} por tanto seu IMC é {:.2f}'.format(peso,altura,imc))
