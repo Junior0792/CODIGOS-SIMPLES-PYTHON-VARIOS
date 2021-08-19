@@ -1,0 +1,6 @@
+tempo = int(input('Quantos anos tem seu cachorro?'))
+if tempo <=4:
+    print('Cachorro novo')
+else:
+    print('Cachorro velho')
+print('FIN')
