@@ -1,0 +1,10 @@
+print('Ben vindo a nosso sistema de vacinação!')
+nome = str(input('Digite seu nome: '))
+idade = int(input('Digite sua idade: '))
+print('Seu nome é {}, e sua idade é {}'.format(nome,idade))
+if idade >=60:
+    print('Agora você esta registrado na nossa lista de vacinação')
+else:
+    print('Você não tem direito de registar se no nosso sistema de vacinação')
+    
+print('Muito obrigado por sua consulta')
