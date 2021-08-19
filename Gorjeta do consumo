@@ -1,0 +1,7 @@
+def calcular_gorjeta(valor, calcular):
+    valor / 10
+    return 
+    
+valor = float(input('Digite o valor total de seu consumo: '))
+calcular = valor / 10
+print('Seu valor a pagar é {} e o 10% da gorjeta é {}'.format(valor,calcular))
