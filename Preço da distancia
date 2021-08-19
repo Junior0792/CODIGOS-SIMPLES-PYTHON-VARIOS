@@ -1,0 +1,7 @@
+distancia = float(input('DIGITE A DISTÂNCIA DA SU VIRGEN: '))
+print('A DISTANCIA DA SUA VIRGEN É {}KM'.format(distancia))
+if distancia <=200:
+    preço = distancia * 0.50
+else:
+    preço: distancia * 0.45
+print('O VALOR DA SUA VIAGEN É {}'.format(preço))
